@@ -1,0 +1,28 @@
+\documentclass[12pt]{letter}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\usepackage{titlesec}
+\titleformat{\section}{\bfseries}{\thesection}{1em}{}
+\input{vars}          % Contains all key terms
+\signature{\authorSig}
+\address{\authorAddr}
+\date{\sendingDate}
+
+\begin{document}
+
+\begin{letter}{\recipientName \\
+%\recipientTitle \\
+%\recipientOrg \\
+\recipientAddrLineOne \\
+\recipientAddrLineTwo}
+
+\opening{\textbf{Re: \matterTitle} \\
+No. \recipientCaseNumber \\[2em]
+\recipientSalutation,}
+
+\input{body} \\[2em]         % Body of the letter lives here
+
+\closing{Yours sincerely,}\\[2em]
+
+\end{letter}
+\end{document}
